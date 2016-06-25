@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-  has-many :comments
+  has_many :comments
 end
