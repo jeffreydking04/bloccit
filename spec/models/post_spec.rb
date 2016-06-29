@@ -8,7 +8,7 @@ RSpec.describe Post, type: :model do
       expect(post).not_to be_nil
     end
 
-    it "should have designatedtitle and body attributes" do
+    it "should have designated title and body attributes" do
       expect(post).to have_attributes(title: "New Post Title", body: "New Post Body")
     end
   end
