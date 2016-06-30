@@ -1,0 +1,32 @@
+June 30, 2016
+
+Assignment 33-Questions Resource
+
+Two days later and I am back on the hunt.  I opened up the project in Cloud 9 yesterday, wrote some code, started the server to make sure I was getting the right results and got a path error from Cloud 9 again.  
+
+I am very certain I did nothing to corrupt my path and that this was a Cloud 9 problem, not a jdking problem (my code worked fine when I cloned it to a new project).  It was the second time that it had happened. 
+
+In addition, Cloud 9 did not respond when I contacted them.  I know I am not a paying customer, but guess what? One day I am going to be a professional developer and I will not be using Cloud 9 because they did not have the time for me when I was using their free service.  
+
+I am pretty certain that the fix would have been fairly easy if I knew where Cloud 9 kept all their files.  I think they have a bug related to the path and their local host and I would just need to reconnect the project with the url (I know I really do not know what I am talking about here, but my google searches led me to believe that a simple edit to the PATH would fix it).
+
+In any case, I decided to use a USB stick to set up a bootable Linux environment.  I got it up and running and chose Linux Mint because it was recommended as the best linux distrobution for desktop by some random site that I do not recall the name of. 
+
+I found out after installing it that Linux Mint had a security breach back in February, but that was addressed.  Linux Mint is supposed to have a extremely enthusiastic community, which is helpful when problems arise.  
+
+So far the experience has been good.  I was able to get rvm, sublime (I am so glad to be back in the sublime editor), ruby, and rails up and running.  I get better at googling the process to fix the inevitable error messages you get when trying to set everything up.
+
+For example: ubuntu (of which linux mint is a derivative) has security features which inhibit certain kinds of global commands (I think).  There is a command with rvm (ruby version control package) that sets the default ruby version, but ubuntu will not let that run.  Googling the issue led me to a fix which led to the standard install instructions working like a charm.  
+
+To make a long story less long, I managed to clone my project in the new environment and I am now up and running on the Linux OS with the most important applications (mail, skype, slack, my homepage) set up for easy access.  
+
+It feels good to have everything be truly local.  I am not very trusting of cloud resources and I am glad to be done with it.  This will also allow me to use brackets as my html/css editor.  Brackets looks really nice.  With an IDE like Cloud 9, you are pretty much stuck with their editors.  Now I can jump around to whatever editor best suits my task.
+
+The above will go in as a blog entry, but onward with the project log.  I am writing the questions assignment and feeling good.
+
+It is a few hours later.  Still learning to get around in the new environment, but I am liking it more and more.  The questions resource assignment was pretty easy.  I can write pretty much everything except a few of the tests and some of the html without consulting the previous work.  
+
+The only new item in the assignment was working with a checkbox, but that just required another div in the form with f.label :resources and f.check_box :resources.  Easy enough
+
+Checkpoint 34-Topics Resource
+
