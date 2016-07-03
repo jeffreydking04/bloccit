@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @topic = Topic.find(params[:topic_id])
     @post = Post.new
     @post.title = params[:post][:title]
     @post.body = params[:post][:body]
@@ -24,7 +25,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
   end
 
