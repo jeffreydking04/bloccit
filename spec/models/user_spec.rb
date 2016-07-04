@@ -37,4 +37,14 @@ RSpec.describe User, type: :model do
       expect(user_with_invalid_email).to_not be_valid
     end
   end
+
+  describe "capitalize name callback" do
+    let(:user_with_lower_case_name) { User.create!(name: "jeffrey king", email: "user@bloccit.com", password: "password") }
+    let(:user_with_upper_case_name) { User.create!(name: "Jeffrey King", email: "user0@bloccit.com", password: "password") }
+
+    it "should initialize name as capitalized" do
+      expect(user_with_upper_case_name.name).to eq("Jeffrey King")
+      expect(user_with_lower_case_name.name).to eq("Jeffrey King")
+    end
+  end
 end
