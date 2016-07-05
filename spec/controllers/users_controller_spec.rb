@@ -44,7 +44,6 @@ RSpec.describe UsersController, type: :controller do
       expect(assigns(:user).name).to eq new_user_attributes[:name]
     end
 
-
     it "should set user email properly" do
       post :create, user: new_user_attributes
       expect(assigns(:user).email).to eq new_user_attributes[:email]
@@ -58,6 +57,11 @@ RSpec.describe UsersController, type: :controller do
     it "should set user password_confirmation properly" do
       post :create, user: new_user_attributes
       expect(assigns(:user).password_confirmation).to eq new_user_attributes[:password_confirmation]
+    end
+
+    it "should log the user in after sign up" do
+      post :create, user: new_user_attributes
+      expect(session[:user_id]).to eq(assigns(:user).id)
     end
 
     it "should redirect to welcome#index view" do
