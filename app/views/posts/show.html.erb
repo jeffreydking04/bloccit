@@ -1,5 +1,5 @@
 <h1>
-  <%= @post.title %>
+  <%= @post.title %><br>
   <small>
     submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
   </small>
@@ -8,10 +8,12 @@
   <div class="col-md-8">
     <p><%= @post.body %></p>
   </div>
-  <% if user_is_authorized_for_post?(@post) %>
-    <div class="col-md-4">
+  <div class="col-md-4">
+    <% if user_is_authorized_for_edit_post?(@post) %>
       <%= link_to "Edit", edit_topic_post_path(@post.topic, @post), class: 'btn btn-success' %>
+    <% end %>
+    <% if user_is_authorized_for_delete_post?(@post) %>
       <%= link_to "Delete Post", topic_post_path(@post.topic, @post), method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
