@@ -34,10 +34,16 @@ posts = Post.all
   )
 end
 
-user = User.first
-user.update_attributes!(
-  name: 'jd king',
-  email: 'jdking33@aol.com',
+admin = User.create!(
+  name: 'Admin User',
+  email: 'admin@bloc.io',
+  password: 'password',
+  role: 'admin'
+)
+
+admin = User.create!(
+  name: 'Member User',
+  email: 'member@bloc.io',
   password: 'password'
 )
 
