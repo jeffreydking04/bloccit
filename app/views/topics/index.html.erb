@@ -15,7 +15,7 @@
       </div>
     <% end %>
   </div>
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div class="col-md-4">
       <%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %>
     </div>
